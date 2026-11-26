@@ -1,0 +1,46 @@
+{
+  "id": "./",
+  "name": "MARS PDF — Semua alat PDF",
+  "short_name": "MARS PDF",
+  "description": "Gabung, pisah, kompres, konversi, edit, tanda tangan, scan, OCR, dan ringkas PDF dengan AI — langsung di perangkat.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "any",
+  "background_color": "#f4f3f7",
+  "theme_color": "#f4f3f7",
+  "categories": ["productivity", "utilities", "business"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "screenshots": [
+    { "src": "icons/screenshot-mobile.png", "sizes": "780x1688", "type": "image/png", "form_factor": "narrow", "label": "Semua alat PDF dalam satu aplikasi" },
+    { "src": "icons/screenshot-wide.png", "sizes": "1440x900", "type": "image/png", "form_factor": "wide", "label": "MARS PDF di desktop" }
+  ],
+  "shortcuts": [
+    { "name": "Scan dokumen", "short_name": "Scan", "url": "./#/t/scan", "icons": [{ "src": "icons/sc-scan.png", "sizes": "96x96" }] },
+    { "name": "Gabung PDF", "short_name": "Gabung", "url": "./#/t/merge", "icons": [{ "src": "icons/sc-merge.png", "sizes": "96x96" }] },
+    { "name": "Kompres PDF", "short_name": "Kompres", "url": "./#/t/compress", "icons": [{ "src": "icons/sc-compress.png", "sizes": "96x96" }] },
+    { "name": "Tanda tangan", "short_name": "TTD", "url": "./#/t/sign", "icons": [{ "src": "icons/sc-sign.png", "sizes": "96x96" }] }
+  ],
+  "share_target": {
+    "action": "./share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        { "name": "files", "accept": ["application/pdf", ".pdf", "image/*", ".docx", ".xlsx", ".pptx", ".txt", ".html"] }
+      ]
+    }
+  },
+  "file_handlers": [
+    { "action": "./", "accept": { "application/pdf": [".pdf"] }, "launch_type": "single-client" }
+  ],
+  "launch_handler": { "client_mode": "focus-existing" }
+}
